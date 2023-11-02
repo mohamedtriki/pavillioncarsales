@@ -1,0 +1,99 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media='screen and (min-width: 900px)' href="{% static 'css/rest.css' %}">
+    <link rel='stylesheet' media='screen and (max-width: 900px)' href="{% static 'css/rest_mobile.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>pavillion car sales finance</title>
+    <link rel="icon" href="{% static 'img/logo.png' %}" sizes="32x32" type="image/svg">
+    <style>
+        body{
+            background: url("{% static 'img/rest_background.png' %}");
+            background-position:center 100%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="index.html"><img id="logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        <div>
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/vehicles">vehicles</a></li>
+                <li><a href="/finance">finance</a></li>
+                <li><a href="/">contact</a></li>
+              </ul>
+            </div>
+          </div>
+    </header>
+    <section id="cont1">
+            <div id="finance_page">
+                <div id="finance">
+                    <div id="finance_text">
+                        <div id="finace_title">Financing your vehicle</div>
+                        <br>
+                        <div id="finace_description">We are experts in offering car finance to customers across the UK. If you have had trouble getting a used car elsewhere then give us a call to see if we can help, we have flexible finance deals to suit all budgets.</div>
+                    </div>
+                    <div id="finace_button">APPLY</div>
+                </div>
+                <div id="why_finance">
+                    <div id="why_finance_title">Why Finance Through a Dealership</div>
+                    <div id="why_finance_videos">
+                        <div id="video1_cont">
+                            <div class="video_title">What is Personal Contract Purchase ?</div>
+                            <div class="video"><iframe width="350" height="200" src="https://www.youtube.com/embed/W6ZUFKLZ6I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        </div>
+                        <div id="video2_cont">
+                            <div class="video_title">What is Personal Contract Purchase ?</div>
+                            <div class="video"><iframe width="350" height="200" src="https://www.youtube.com/embed/W0YFgA1S73Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        </div>
+                        <div id="video3_cont">
+                            <div class="video_title">What is Hire Purchase ?</div>
+                            <div class="video"><iframe width="350" height="200" src="https://www.youtube.com/embed/W6ZUFKLZ6I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="finance_detail">
+            <p>FINANCIAL DISCLOSURE</p>
+            <h4 id="borker_detail">Pavillion Car Sales Ltd are a credit broker and not a lender. We are Authorised and Regulated by the Financial Conduct Authority. FCA No: 771966 Finance is Subject to status. Other offers may be available but cannot be used in conjunction with this offer. We work with a number of carefully selected credit providers who may be able to offer you finance for your purchase.</h4>
+            <p>Registered in England & Wales: 08034612</p>
+            <p>Registered Office: Address:</p>
+            <p>37A Lewes Road Brighton BN2 3HQ</p>
+            <p>Data Protection No: ZA569256</p>
+        </div>
+        <footer>
+            <div id="company-info">
+                <div id="info_title">Company Infomation:</div>
+                <br>
+                <div id="info_description">
+                    <div id="company_name">Name: Pavillion Car Sales ltd</div>
+                    <div id="company_date">Incorporated on: 17 April 2012</div>
+                    <div id="company_number">Company number: 08034612</div>
+                </div>
+            </div>
+            <div id="company_contact_info">
+                <div id="copyright">Copyright © PAVILLION CAR SALES. New Port Street, Brighton, East Sussex, BN2 3HL Privacy Policy</div>
+                <div id="contact_info">
+                    <p>Tel: 01273 671 536</p>
+                    <p>Mobile: 07442 120 021</p>
+                    <p>Email: pavillioncarsales@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+</html>

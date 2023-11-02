@@ -1,0 +1,282 @@
+{% load static%}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media='screen and (min-width: 900px)' href="{% static 'css/home.css' %}">
+    <link rel='stylesheet' media='screen and (max-width: 900px)' href="{% static 'css/home_mobile.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>pavillion car sales</title>
+    <link rel="icon" href="{% static 'img/logo.png' %}" sizes="32x32" type="image/svg">
+    <style>
+        #cont1{
+            background: url("{% static 'img/home_background.png' %}");
+            background-position:center 105%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="index.html"><img id="logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        <div>
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><span></span></label>
+            <label for="active" class="close"></label>
+            <div class="wrapper">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/vehicles">vehicles</a></li>
+                <li><a href="/finance">finance</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+            </div>
+          </div>
+    </header>
+    <section id="cont1" >
+        <div id="home_page">
+            <div id="img-frame">
+               <div id="slider">
+                    <figure>
+                        <img class="img" src="{% static 'img/img1.jpg' %}" alt="">
+                        <img class="img" src="{% static 'img/img2.jpg' %}" alt="">
+                        <img class="img" src="{% static 'img/img3.jpg' %}" alt="">
+                        <img class="img" src="{% static 'img/img4.jpg' %}" alt="">
+                        <img class="img" src="{% static 'img/img2.jpg' %}" alt="">
+                        <img class="img" src="{% static 'img/img1.jpg' %}" alt="">
+                    </figure>
+               </div> 
+               <div id="rect1"></div>    
+               <div id="rect2"></div>   
+            </div> 
+            <br><br>
+            <div id="text_frame">
+                <div id="title">PAVILLION CAR SALES</div>
+                <br>
+                <div id="title_discripton">Pavillion Car Sales offers fantastic prices on second-hand cars! We are based in Brighton and always pride ourselves on offering a fantastic range of used cars to suit every need coupled with excellent customer service. Since 2010 we have been a family-run business and have created a family-like environment for our customers too.  </div>
+            </div>
+        </div>
+        <!-- <form class="form" action="">
+            <div class="form_cont">
+                <label class="label" for="">Make</label>
+                <select name="" id=""></select>
+            </div>
+            <div class="form_cont">
+                <label class="label" for="">Model</label>
+                <select name="" id=""></select>
+            </div>
+            <div class="form_cont">
+                <label class="label" for="">Min price</label>
+                <select name="" id="">
+                    <option value="">-----</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
+                    <option value="4000">4000</option>
+                    <option value="5000">5000</option>
+                    <option value="6000">6000</option>
+                    <option value="7000">7000</option>
+                    <option value="8000">8000</option>
+                    <option value="9000">9000</option>
+                    <option value="10000">10000</option>
+                    <option value="11000">11000</option>
+                    <option value="12000">12000</option>
+                    <option value="15000">15000</option>
+                    <option value="20000">20000</option>
+                    <option value="50000">50000</option>
+                    <option value="100000">100000</option>
+                    <option value="500000">500000</option>
+                </select>
+            </div>
+            <div class="form_cont">
+                <label class="label" for="">Max price</label>
+                <select name="" id="">
+                    <option value="">-----</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
+                    <option value="4000">4000</option>
+                    <option value="5000">5000</option>
+                    <option value="6000">6000</option>
+                    <option value="7000">7000</option>
+                    <option value="8000">8000</option>
+                    <option value="9000">9000</option>
+                    <option value="10000">10000</option>
+                    <option value="11000">11000</option>
+                    <option value="12000">12000</option>
+                    <option value="15000">15000</option>
+                    <option value="20000">20000</option>
+                    <option value="50000">50000</option>
+                    <option value="100000">100000</option>
+                    <option value="500000">500000</option>
+                </select>
+            </div>
+            <div class="form_cont">
+                <label class="label" for="">transmition</label>
+                <select name="" id=""></select>
+            </div>
+            <div class="form_cont">
+                <label class="label" for="">fuel type</label>
+                <select name="" id=""></select>
+            </div>
+            <button type="submit" id="search">SEARCH</button>
+        </form> -->
+        <section id="cont1-1">
+            <div id="part1">
+                <div id="warranty">
+                    <div id="warranty_title">What's a warranty and why do I need one?</div>
+                    <div id="warranty_description">We'd all like to think our cars will never let us down. But unfortunately, the reality is sometimes a little different. No matter how well you maintain your car, components can still fail and result in costly repair bills.To keep your car ownership stress-free, we're offering a warranty with our cars to give you peace of mind.</div>
+                </div>
+                <div id="warranty_img">
+                    <img src="{% static 'img/AA.png' %}" id="aa_img" alt="">
+                    <svg id="aa_deco" width="387" height="397" viewBox="0 0 387 397" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M196.554 333.362H116.088C111.708 332.997 102.293 330.844 99.6658 325.152C97.0383 319.459 79.9597 270.96 71.7488 247.422" stroke="#1150A0" stroke-width="7.6635" stroke-linecap="round"/>
+                        <path d="M359.13 206.915L381.573 137.396C383.763 129.185 381.573 124.806 376.647 119.332C371.72 113.858 338.694 90.8673 323.55 79.9194" stroke="#1150A0" stroke-width="7.6635" stroke-linecap="round"/>
+                        <circle cx="73.5948" cy="32.5" r="32.5" fill="#1150A0"/>
+                        <circle cx="365.609" cy="280.723" r="12.5" fill="#1150A0"/>
+                        <circle cx="312.68" cy="32.9218" r="16.5" fill="#1150A0"/>
+                        <ellipse cx="309.827" cy="370.858" rx="23.5" ry="26" fill="#1150A0"/>
+                        <circle cx="22.5" cy="227.5" r="22.5" fill="#1150A0"/>
+                        </svg>                        
+                </div>
+            </div>
+            <div id="part2">
+                <div id="warranty_feature">
+                    <div id="feature_title">Our warranty includes :</div>
+                    <div id="feature_description">
+                        <p>• 12 months' free Basic Breakdown Cover or an upgrade for Members</p>
+                        <p>• No limit to the number of claims</p>
+                        <p>• Nationwide approved repair network</p>
+                    </div>
+                </div>
+                <div id="warranty_level">
+                    <div id="level_title">levels of cover :</div>
+                    <div id="level_description">
+                         <div><h3>• Protect Lite:</h3><p class="levels">  Protection against listed components.</p></div>
+                         <div><h3>• Protect Essential:</h3><p class="levels">Almost all mechanical and electrical items. Plus key fobs up to £200 and in-car entertainment (including Sat Nav) up to £500.</p></div>
+                         <div><h3>• Protect Plus:</h3> <p class="levels">Almost all mechanical and electrical items. Plus wear and tear up to 85,000 miles, diagnosis, oil seals, DPF or catalytic converter, key fobs up to £200, unlimited cover for in-car entertainment (including Sat Nav).</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cont1-2">
+            <div id="part_exchange_img">
+                <img id="part_img" src="{% static 'img/part.png' %}" alt="">
+                <svg id="part_deco" width="444" height="350" viewBox="0 0 444 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M124.413 113C124.413 128.188 112.101 140.5 96.9131 140.5C81.7253 140.5 69.4131 128.188 69.4131 113C69.4131 97.8122 81.7253 85.5 96.9131 85.5C112.101 85.5 124.413 97.8122 124.413 113Z" fill="#1150A0"/>
+                    <circle cx="17.5" cy="332.5" r="17.5" fill="#1150A0"/>
+                    <circle cx="421.5" cy="327.5" r="22.5" fill="#1150A0"/>
+                    <circle cx="303.5" cy="37.5" r="37.5" fill="#1150A0"/>
+                    </svg>                    
+            </div>
+            <div id="part_exchange">
+                <div id="part_exchange_title">Part Exchange</div>
+                <br>
+                <div id="part_exchange_description">To make buying your next car as simple as possible we offer excellent part exchange prices on a wide range of vehicles. Call us today, or pop in and we will give you a valuation straight away, meaning you are one step closer to driving away in the car of your dreams. If you are looking to sell a car for cash/bank transfer we are also interested in buying and can offer competitive rates.</div>
+                <br><br>
+                <div id="part_exchange_link"><span>CLICK HERE FOR A GUIDE PRICE</span></div>
+            </div>
+        </section>
+        <section id="cont1-3">
+            <div id="idlocation">
+                <div id="location_title">our location :</div>
+                <div id="location_description">New Port Street, Brighton, East Sussex, BN2 3HL</div>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10079.425846171649!2d-0.1286082!3d50.8338226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x772babe528bc1cd!2sPavillion%20Car%20Sales!5e0!3m2!1sen!2stn!4v1626310768036!5m2!1sen!2stn" width="570" height="350"  allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div id="date">
+                <img id="date_img" src="{% static 'img/date.png' %}" alt="">
+                <br>
+                <div id="date_img_description">• Alternative times available by appointment. 17:00 to 18:00 is by appointment only every day and Sunday's is strictly by appointment only. FINANCE AVAILABLE ONLINE - PART EX ACCEPTED - REMOTE DEPOSIT AVAILABLE</div>
+            </div>
+        </section>
+        <section id="cont1-4">
+            <div id="contact_frame">
+                <div id="big_rec">
+                    <div id="rec1">
+                        <div id="contact_text">
+                            <div id="contact_text1">CONTACT</div>
+                            <div id="contact_text2">US</div>
+                            <div id="contact_text3">
+                                <svg width="207" height="14" viewBox="0 0 207 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M200 7H7" stroke="white" stroke-width="13" stroke-linecap="round"/>
+                                    </svg>                                    
+                            </div>
+                        </div>
+                        <div id="social_media">
+                            <a href="#"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path id="instagram_logo" fill-rule="evenodd" clip-rule="evenodd" d="M24.5 0C38.0213 0 49 10.964 49 24.5C49 38.0213 38.036 49 24.5 49C10.9787 49 0 38.036 0 24.5C0 10.9787 10.964 0 24.5 0ZM18.7681 11.0522H30.2319C34.5381 11.0522 38.0507 14.5354 38.0507 18.7681V30.2025C38.0507 34.4499 34.5381 37.9184 30.2319 37.9184H18.7681C14.4619 37.9184 10.9493 34.4499 10.9493 30.2025V18.7681C10.9493 14.5207 14.4766 11.0522 18.7681 11.0522ZM24.4265 17.2397C28.6152 17.2397 32.0102 20.6347 32.0102 24.8233C32.0102 29.012 28.6152 32.407 24.4265 32.407C20.2379 32.407 16.8428 29.012 16.8428 24.8233C16.8428 20.6347 20.2379 17.2397 24.4265 17.2397ZM24.4265 19.7969C27.1896 19.7969 29.4382 22.0456 29.4382 24.8086C29.4382 27.5717 27.1896 29.8203 24.4265 29.8203C21.6488 29.8203 19.4148 27.5717 19.4148 24.8086C19.4148 22.0456 21.6635 19.7969 24.4265 19.7969ZM31.7603 16.1815C32.4364 16.1815 32.9949 16.7253 32.9949 17.416C32.9949 18.0921 32.4511 18.6506 31.7603 18.6506C31.0843 18.6506 30.5258 18.1068 30.5258 17.416C30.5258 16.74 31.0696 16.1815 31.7603 16.1815ZM19.7088 13.2421H29.2912C32.892 13.2421 35.8314 16.1668 35.8314 19.7528V29.3941C35.8314 32.9802 32.892 35.9049 29.2912 35.9049H19.7088C16.108 35.9049 13.1686 32.9802 13.1686 29.3941V19.7528C13.1686 16.1668 16.108 13.2421 19.7088 13.2421Z" fill="#363434"/>
+                                </svg>      
+                            </a>                                                                    
+                            <a href="#"><svg  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path id="facebook_logo" d="M25 0.174072C11.311 0.174072 0.174011 11.3111 0.174011 25.0001C0.174011 38.6891 11.311 49.8261 25 49.8261C38.689 49.8261 49.826 38.6891 49.826 25.0001C49.826 11.3111 38.689 0.174072 25 0.174072ZM31.174 25.8741H27.135C27.135 32.3271 27.135 40.2721 27.135 40.2721H21.15C21.15 40.2721 21.15 32.4041 21.15 25.8741H18.305V20.7861H21.15V17.4951C21.15 15.1381 22.27 11.4551 27.19 11.4551L31.623 11.4721V16.4111C31.623 16.4111 28.928 16.4111 28.404 16.4111C27.88 16.4111 27.136 16.6731 27.136 17.7971V20.7871H31.696L31.174 25.8741Z" fill="#363434"/>
+                                </svg>    
+                            </a>                                
+                        </div>
+                    </div>
+                    <div id="rec2">
+                        <div id="rec2_cont">
+                            {% if submited %} 
+                            <h1>your form was submitted successfully</h1>
+                            <p>{{message}}</p>
+                            {% else  %}
+                            <form action="" name='contact' method="POST">
+                                {% csrf_token %}
+                                {{form|crispy}}
+                                <input type="submit">
+                            </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="company-info">
+                <div id="info_title">Company Infomation:</div>
+                <br>
+                <div id="info_description">
+                    <div id="company_name">Name: Pavillion Car Sales ltd</div>
+                    <div id="company_date">Incorporated on: 17 April 2012</div>
+                    <div id="company_number">Company number: 08034612</div>
+                </div>
+            </div>
+            <div id="company_contact_info">
+                <div id="copyright">Copyright © PAVILLION CAR SALES. New Port Street, Brighton, East Sussex, BN2 3HL Privacy Policy</div>
+                <div id="contact_info">
+                    <p>Tel: 01273 671 536</p>
+                    <p>Mobile: 07442 120 021</p>
+                    <p>Email: pavillioncarsales@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/60e0668a649e0a0a5cca5bef/1f9m91476';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
